@@ -42,15 +42,21 @@ For Code Coverage
 
 $ ng test --code-coverage
 
+![](images/SpaceX_Testcases.PNG)
+
 # Run Lint
 
 Linting is the automated checking of your source code for programmatic and stylistic errors.
 
 $ ng lint
 
+![](images/SpaceX_LintingPassed.PNG)
+
 # LightHouse Score for Performance, SEO , Accessibility and Best Practices
 
 Score: 91
+
+![](images/SpaceX_LighthouseforPerformance.PNG)
 
 # Approach to develop this Angular Application
 
