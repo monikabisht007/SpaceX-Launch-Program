@@ -81,6 +81,12 @@ Score: 91
 
 10. Unit testing done for the components by writing test cases.
 
+Desktop View:
+![](images/DesktopView.PNG)
+
+Mobile View:
+![](images/MobileView.PNG)
+
 # Heroku Deployment using GitHub
 
 1. Create Repository on Github and upload files
