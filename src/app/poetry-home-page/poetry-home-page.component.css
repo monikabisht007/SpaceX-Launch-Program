@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    height: 750px;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+  }
+  
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .flex-item-right {
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 700px) {
+    .flex-container {
+      flex-direction: column;
+      padding-right: 27px;
+    }
+    .flex-item-left {
+        margin-left: 33px;
+    }  
+   
+}
+
+body {
+    background-color: #F2F2F2 !important;
+  }
+  
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    font-size: calc(22px + 2vmin);
+    color: #0A0A0A;
+    padding-left: 16px;
+  }
+  
+  .App-filter-card {
+    width: 15rem;
+    margin-bottom: 15px;
+  }
+
+  .App-filter-button {
+    flex: 0 40%;
+    margin: 10px;
+    width: 6rem;
+    background-color:Chartreuse;
+  }
+
+  .App-filter-button:focus{  
+
+    background-color:MediumSeaGreen;
+
+   }
+  

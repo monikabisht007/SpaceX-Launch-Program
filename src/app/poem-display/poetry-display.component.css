@@ -1,0 +1,19 @@
+.Poem-Display{
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 3px;
+    background-color: white;
+    margin-right: 4px;
+    margin-bottom: 20px;
+    width: 53rem;
+    background-color: lavenderblush;
+}    
+
+.Poem-Lines{
+    font-size: 18px;
+}
+
+.Poem-Title{
+    font-size: 22px;
+    font-weight:bold;
+}

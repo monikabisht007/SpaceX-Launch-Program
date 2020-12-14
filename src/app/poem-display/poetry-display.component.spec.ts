@@ -3,15 +3,15 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonService } from '../services/common.service';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
-import { RocketLaunchComponent } from './rocket-launch.component';
+import { PoetryDisplayComponent } from './poetry-display.component';
 
-describe('RocketLaunchComponent', () => {
-  let component: RocketLaunchComponent;
-  let fixture: ComponentFixture<RocketLaunchComponent>;
+describe('PoetryDisplayComponent', () => {
+  let component: PoetryDisplayComponent;
+  let fixture: ComponentFixture<PoetryDisplayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RocketLaunchComponent ],
+      declarations: [ PoetryDisplayComponent ],
       imports: [HttpClientModule],
       providers: [CommonService],
       schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
@@ -20,7 +20,7 @@ describe('RocketLaunchComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RocketLaunchComponent);
+    fixture = TestBed.createComponent(PoetryDisplayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

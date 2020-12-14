@@ -3,24 +3,29 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { RocketLaunchComponent } from './rocket-launch/rocket-launch.component';
 import { CommonService } from './services/common.service';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { PoetryHomePageComponent } from './poetry-home-page/poetry-home-page.component';
+import { PoetryDisplayComponent } from './poem-display/poetry-display.component';
 
 const appRoutes: Routes = [
-  { path: 'filter/:type', component: AppComponent },
+  { path: 'searchAuthorWithTitle', component: PoetryDisplayComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    RocketLaunchComponent
+    PoetryDisplayComponent,
+    PoetryHomePageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [CommonService],
+  providers: [CommonService, NgForm],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,8 @@
+<div *ngFor="let authorWithTitle of authorWithTitles" class="Poem-Display">
+  <ng-content></ng-content>
+  <div class="Poem-Title">{{authorWithTitle.title}}</div><br>
+  <div *ngFor="let lines of authorWithTitle.lines" class="Poem-Lines">
+   {{lines}}
+   </div><br>
+  
+  </div>

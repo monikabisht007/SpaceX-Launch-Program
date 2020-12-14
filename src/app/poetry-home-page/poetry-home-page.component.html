@@ -1,0 +1,33 @@
+  <div class="flex-container"> 
+   <div class="App-filter-card">
+     <div class="body">
+       <h1 class="App-header">Poetry Application</h1>
+       <form (ngSubmit)="searchAuthorWithTitles(f)" #f="ngForm">
+       <fieldset>
+         <legend>Poetry:</legend>
+         <label for="author">Author:</label><br>
+       <input list="authors" id="author" name="author" ngModel (input)="filterTitle($event)" #author="ngModel"><br>
+       <datalist id="authors" *ngIf="autoCompleteAuthors">
+         <option *ngFor="let option of autoCompleteAuthors.authors" value="{{option}}" >
+         </option>
+       </datalist>
+       <label for="title">Title:</label><br>
+       <input list="titles" id="title" name="title" ngModel #title="ngModel" [disabled]="!author.dirty"><br>
+        <datalist id="titles" *ngIf="autoCompleteTitles">
+         <option *ngFor="let option of autoCompleteTitles" value="{{option.title}}"></option>
+       </datalist> 
+     </fieldset>
+         <button class="App-filter-button" 
+            [disabled]="!author.dirty || !title.dirty || author.value == '' || title.value == '' ">
+           Search
+         </button>
+         </form>
+         </div>
+         </div>
+         
+<div class="flex-item-right">
+   <app-poetry-display>
+     <p *ngIf="rhymeMessage; else nomessage">Rhyme Scheme: AA BB</p>
+     <ng-template #nomessage>Rhyme scheme : Notfound</ng-template>
+   </app-poetry-display>
+ </div>
